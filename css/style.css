@@ -1,6 +1,5 @@
 /*===== Google Fonts =====*/
-/* @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Caveat:wght@600&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 /*===== Global CSS =====*/
 html
 {
@@ -18,7 +17,7 @@ html
 }
 body
 {
-    font-family: "Kaushan Script", cursive;
+    font-family: "Kausan" , cursive;
     font-size: 16px;
     font-weight: normal;
     overflow-x: hidden;
@@ -38,6 +37,7 @@ ul
 img
 {
     vertical-align: middle;
+    
 }
 .container
 {
@@ -48,6 +48,7 @@ img
 {
     display: flex;
     flex-wrap: wrap;
+    
 }
 .justify-content-center
 {
@@ -267,7 +268,7 @@ img
     background-color: var(--black-100);
     z-index: 1;
     overflow-x: hidden;
-    padding-top: 80px;
+    padding-top: 140px;
 }
 .header-social
 {
@@ -336,9 +337,14 @@ img
 .home-section .home-image .img-box img
 {
     position: relative;
-    width: 73%;
+    width: 80%;
     z-index: 789;
-    margin-left: 230px;
+   
+}
+.img-box img
+{
+    border-radius: 50%;
+    margin-left: 130px;
 }
 
 .header-hero-shape
@@ -355,7 +361,7 @@ img
     content: '';
     width: 1000%;
     height: 100%;
-    background-color: var(--main-color);
+    background-color: #A9A9A9;
     transform: skewX(20deg);
     top: 0;
     left: 0;
@@ -368,49 +374,7 @@ img
     max-width: 50%;
     padding: 20px;
 }
-.about-section .about-image .img-box
-{
-    position: relative;
-}
-.about-section .about-image .img-box img
-{
-    max-width: 100%;
-    width: 100%;
-    z-index: 8;
-}
-.about-section .about-image .img-box .about-shape
-{
-    width: 404px;
-    height: 525px;
-    border-left: 15px solid var(--main-color);
-    border-bottom: 15px solid var(--main-color);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-}
-.about-section .about-image .img-box .about-shape::before
-{
-    position: absolute;
-    content: '';
-    width: 15px;
-    height: 85%;
-    background-color: var(--main-color);
-    bottom: 0;
-    right: 0;
-}
-.about-section .about-image .img-box .about-shape::after
-{
-    position: absolute;
-    content: '';
-    width: 104%;
-    height: 15px;
-    background-color: var(--main-color);
-    top: 36px;
-    right: -2px;
-    transform: rotate(11deg);
-    border-top-left-radius: 20px;
-}
+
 .about-section .about-content p
 {
     text-align: justify;
@@ -470,83 +434,7 @@ img
     top: -7px;
     right: 0;
 }
-/*===== Services =====*/
-.service-section
-{
-    min-height: 100vh;
-    background-color: var(--black-100);
-}
-.service-section .service-item
-{
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-}
-.service-section .service-item-inner
-{
-    box-shadow: var(--shadow-black-100);
-    padding: 50px 15px;
-    border-radius: 10px;
-    width: 100%;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-.service-section .service-item-inner:hover
-{
-    background-color: var(--main-color);
-}
-.service-section .service-item-inner .icon 
-{
-    height: 60px;
-    width: 60px;
-    background-color: var(--main-color);
-    margin: 0 auto 30px;
-    text-align: center;
-    font-size: 28px;
-    color: var(--white);
-    border-radius: 20px;
-    border-bottom-right-radius: 0;
-    position: relative;
-    z-index: 1;
-    transition: all 0.3s ease;
-}
-.service-section .service-item-inner:hover .icon
-{
-    background-color: var(--white);
-    color: var(--main-color);
-    font-size: 24px;
-}
-.service-section .service-item-inner .icon i
-{
-    line-height: 60px;
-}
-.service-section .service-item-inner h3
-{
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--black-900);
-    margin: 0 0 10px;
-    text-transform: capitalize;
-    transition: all 0.3s ease;
-}
-.service-section .service-item-inner:hover h3
-{
-    color: var(--white);
-}
-.service-section .service-item-inner p
-{
-    font-size: 16px;
-    color: var(--black-400);
-    margin: 0;
-    line-height: 26px;
-    transition: all 0.3s ease;
-}
-.service-section .service-item-inner:hover p
-{
-    color: var(--black-100);
-}
+
 /*===== portfolio =====*/
 .portfolio .portfolio-filter
 {
@@ -555,63 +443,58 @@ img
     padding: 20px;
     text-align: center;
 }
-.portfolio .portfolio-filter button
-{
-    text-transform: uppercase;
-    margin-top: -20px;
-    outline: none;
-    border: 1px solid;
-    border-color: var(--main-color);
-    padding: 8px;
-    font-weight: 600;
-    border-radius: 5px;
-    background-color: var(--white);
-    margin-right: 20px;
-    color: var(--main-color);
-    margin-bottom: 20px;
-    transition: all 0.3s ease;
+/* porfolio new start*/
+.project-content{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+	grid-gap: 2rem;
+	align-items: center;
+	margin-top: 1rem;
+    padding-left: 250px;
+    padding-right: 250px;
 }
-.portfolio .portfolio-filter button:last-child
-{
-    margin-right: 0;
+.col-content{
+	position: relative;
+    justify-content: center;
 }
-.portfolio .portfolio-filter button:hover,
-.portfolio .portfolio-filter button.active 
-{
-    color: var(--white);
-    background-color: var(--main-color);
+.col-content img{
+	width: 200px;
+	height: 300px;
+	object-fit: fill;
+	border-radius: 15px;
+	filter: brightness(80%);
+	transition: all .3s cubic-bezier(.495,.05,.55,.95);
+	will-change: filter;
+    margin: auto;
 }
+.col-content p{
+	position: relative;
+	font-size: 15px;
+	color: black;
+	left: 15px;
+	top: 5px;
+	letter-spacing: 2px;
+}
+.col-content:hover{
+	filter: brightness(100%) hue-rotate(45deg);
+	transform: scale(1.04);
+	cursor: pointer;
+}
+
+
+/* portfolio new end */
 .portfolio .portfolio-item
 {
     flex: 0 0 33.33%;
     max-width: 33.33%;
     padding: 0px;
-    display: flex;
+    display: flex ;
     flex-wrap: wrap;
+    margin-top: -100px;
+    
     
 }
-.portfolio .portfolio-item.hide 
-{
-    display: none;
-}
-.portfolio .portfolio-item.show
-{
-    display: block;
-    animation:  showItem 0.5s ease;
-}
-@keyframes showItem
-{
-    0%
-    {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    100%
-    {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
+
 .portfolio .portfolio-item-inner
 {
     width: 100%;
@@ -621,12 +504,14 @@ img
     cursor: pointer;
     position: relative;
     margin: 100px;
+    
 }
 .portfolio .portfolio-item-inner .portfolio-img img
 {
     width: 100%;
-    display: block;
+    object-fit: fill;
 }
+
 .portfolio .portfolio-item .portfolio-info
 {
     position: absolute;
@@ -797,109 +682,7 @@ img
     font-size: 32px;
     line-height: 40px;
 }
-/*===== pricing =====*/
-.pricing-item
-{
-    flex: 0 0 33.33%;
-    max-width: 33.33%;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-}
-.pricing-plan
-{
-    box-shadow: var(--shadow-black-100);
-    border-radius: 10px;
-    overflow: hidden;
-    width: 100%;
-}
-.pricing-plan .pricing-header
-{
-    padding: 20px 30px;
-    border-bottom: 1px solid var(--black-100);
-    position: relative;
-}
-.pricing-plan .pricing-header h3
-{
-    font-size: 30px;
-    color: var(--black-900);
-    font-weight: 500;
-    text-transform: capitalize;
-    margin: 0;
-}
-.best-value
-{
-    position: absolute;
-    right: -35%;
-    top: 50%;
-    width: 100%;
-    color: var(--white);
-    background-color: var(--main-color);
-    text-transform: capitalize;
-    transform: rotate(50deg);
-    font-size: 20px;
-    text-align: center;
-    padding: 10px 0;
-}
-.pricing-plan .pricing-price
-{
-    padding: 40px 30px;
-    display: flex;
-    line-height: 0.7;
-}
-.pricing-plan .pricing-price .currency
-{
-    font-size: 16px;
-    font-weight: 300;
-    color: var(--black-400);
-    margin-right: 5px;
-    align-self: flex-start;
-}
-.pricing-plan .pricing-price .price 
-{
-    font-size: 80px;
-    font-weight: 700;
-    color: var(--main-color);
-}
-.pricing-plan .pricing-price .period
-{
-    font-size: 14px;
-    font-weight: 300;
-    color: var(--black-400);
-    margin-right: 5px;
-    align-self: flex-end;
-    text-transform: uppercase;
-}
-.pricing-plan .pricing-body
-{
-    padding: 0 30px;
-}
-.pricing-plan .pricing-body ul li
-{
-    font-size: 16px;
-    font-weight: 300;
-    color: var(--black-400);
-    padding: 10px 0 10px 30px;
-    border-bottom: 1px solid var(--black-alpha-100);
-    line-height: 26px;
-    position: relative;
-}
-.pricing-plan .pricing-body ul li:last-child
-{
-    border-bottom: none;
-}
-.pricing-plan .pricing-body ul li i
-{
-    color: var(--main-color);
-    position: absolute;
-    left: 0;
-    top: 12px;
-}
-.pricing-plan .pricing-footer
-{
-    padding: 40px;
-    text-align: center;
-}
+
 /*===== contact =====*/
 .contact-section
 {
